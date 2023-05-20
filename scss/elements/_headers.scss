@@ -1,0 +1,118 @@
+@import "../settings/all";
+
+.header {
+  height: 70px;
+  box-shadow: 0 3px 6px #00000029;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .header__div {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .menu__btn {
+        display: none;
+
+        &:checked {
+          ~ nav {
+            display: flex;
+          }
+
+          ~ .menu__toggle {
+            position: relative;
+
+            span {
+              position: absolute;
+
+              &:nth-child(1) {
+                top: 50%;
+                transform-origin: 50% 50%;
+                transform: rotate(45deg);
+              }
+
+              &:nth-child(2) {
+                opacity: 0;
+              }
+
+              &:nth-child(3) {
+                top: 50%;
+                transform-origin: 50% 50%;
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+      }
+
+      .menu__toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 2em;
+        width: 2em;
+
+        @include tablet {
+          display: none;
+        }
+
+        span {
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: dodgerblue;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .header__nav {
+      height: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border: 2px solid red;
+
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .nav__element {
+        height: 70px;
+        border: 2px solid blue;
+        font-family: $font-open-sans;
+        font-size: 0.6875em;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid transparent;
+        margin-left: 25px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include tablet {
+          .nav__link {
+            color: $color-grey;
+          }
+          &:hover {
+            border-bottom: 2px solid $color-primary;
+
+            .nav__link {
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

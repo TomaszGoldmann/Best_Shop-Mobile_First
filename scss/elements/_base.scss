@@ -1,0 +1,31 @@
+@import "../settings/all";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-open-sans;
+}
+
+a {
+  display: block;
+  color: $color-black;
+  text-decoration: none;
+}
+
+.container {
+  width: $width-desktop;
+  margin: 0 auto;
+  @include wide {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.logo {
+  font-family: $font-raleway;
+  font-size: 2em;
+  font-weight: 300;
+  color: $color-primary;
+}
