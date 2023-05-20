@@ -1,0 +1,23 @@
+@import "../settings/all";
+
+.btn--large {
+  width: calc(100vw - 2em);
+  height: 4.1875em;
+  background: $color-primary;
+  box-shadow: 5px 10px 14px #07ACE629;
+  border-radius: 2.5em;
+
+  font-family: $font-open-sans;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.375em;
+  color: $color-white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    width: 19.375em;
+  }
+}

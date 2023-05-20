@@ -8,6 +8,14 @@ body {
   font-family: $font-open-sans;
 }
 
+h1 {
+  display: block;
+  font-family: $font-raleway;
+  font-size: 2.1875em;
+  font-weight: normal;
+  line-height: 2.5625em;
+}
+
 a {
   display: block;
   color: $color-black;
