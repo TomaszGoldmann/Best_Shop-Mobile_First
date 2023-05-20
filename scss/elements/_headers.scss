@@ -74,13 +74,13 @@
       }
     }
 
-    nav {
-      display: none;
-
-      @include tablet {
-        display: block;
-      }
-    }
+    //nav {
+    //  display: none;
+    //
+    //  @include tablet {
+    //    display: block;
+    //  }
+    //}
 
     .header__nav {
       height: 70px;
