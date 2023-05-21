@@ -17,3 +17,42 @@
     @content
   }
 }
+
+@mixin circle($color) {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3.9375em;
+  width: 3.9375em;
+  background-color: $color;
+  border-radius: 50%;
+}
+
+@mixin shape($color, $radius, $mob, $des) {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background-color: $color;
+  border-radius: $radius;
+  rotate: 45deg;
+  height: $mob;
+  width: $mob;
+  @include desktop {
+    height: $des;
+    width: $des;
+  }
+  @content
+}
+
+@mixin floor($color) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: $color;
+}
