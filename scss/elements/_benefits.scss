@@ -15,7 +15,7 @@
     align-items: center;
 
     .benefits__single {
-      width: 100vh;
+      width: 100vw;
       max-width: 100%;
       padding: 2em 2em;
       background-color: $color-white;
@@ -106,7 +106,7 @@
     }
 
     .benefits__double {
-      width: 100vh;
+      width: 100vw;
       max-width: 100%;
       display: flex;
       flex-direction: column;

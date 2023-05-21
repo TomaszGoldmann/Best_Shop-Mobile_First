@@ -1,0 +1,134 @@
+@import "../settings/all";
+@import "base";
+
+#prices {
+  margin: 3.3125em auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .pricing__boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .pricing__box {
+      width: 70%;
+      min-width: 293px;
+      height: 251px;
+      border-radius: 2em;
+      margin: 2em 0;
+      padding: 2em;
+      position: relative;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @include tablet {
+        flex-direction: column;
+        width: 30%;
+        min-width: 100px;
+        height: 461px;
+      }
+
+      .pricing__details {
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .pricing__type {
+          font: normal normal bold 20px/1px Raleway;
+          font-family: $font-raleway;
+          font-weight: bold;
+          font-size: 1.25em;
+          color: $color-black;
+        }
+        .pricing__price {
+          font-family: $font-open-sans;
+          font-weight: 300;
+          font-size: 3em;
+        }
+        .pricing__limited {
+          font-family: $font-raleway;
+          font-weight: bold;
+          font-size: 0.75em;
+        }
+      }
+      .pricing__items {
+        .pricing__item {
+          margin: 10px 0;
+
+          @include tablet {
+            margin: 13px 0;
+          }
+
+          &:before {
+            content: "";
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            margin-right: 10px;
+            background-image: url("../assets/Ckechmark-1.svg");
+          }
+
+          &--not:before {
+            background-image: url("../assets/Close.svg");
+          }
+        }
+      }
+    }
+
+    .pricing__box--basic {
+      border: 2px solid $color-redish;
+
+      .pricing__price {
+        color: $color-redish;
+      }
+    }
+
+    .pricing__box--professional {
+      width: 80%;
+      min-width: 339px;
+      height: 277px;
+      border: 2px solid $color-primary;
+      box-shadow: 5px 10px 27px #07ACE629;
+
+      .pricing__price {
+        color: $color-primary;
+      }
+
+      @include tablet {
+        width: 35%;
+        min-width: 150px;
+        height: 500px;
+      }
+
+      .btn {
+        background-color: $color-primary;
+      }
+    }
+    .pricing__box--premium {
+      border: 2px solid $color-green;
+
+      .pricing__price {
+        color: $color-green;
+      }
+
+      .btn {
+        background-color: $color-green;
+      }
+    }
+  }
+}
