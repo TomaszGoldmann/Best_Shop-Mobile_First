@@ -1,7 +1,7 @@
 @import "../settings/all";
 
 .statistics {
-  margin: 5em 0;
+  margin: 3em 0;
 
   .container {
     display: flex;
@@ -35,6 +35,12 @@
         }
         &:nth-child(3) > .statistics__circle:before {
           @include circle($color-green)
+        }
+        &:first-child {
+          margin-top: 1em;
+        }
+        &:last-child {
+          margin-bottom: 0;
         }
 
         .statistics__circle {
