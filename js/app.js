@@ -39,6 +39,7 @@ function handlePackage(event) {
 function handleChange(event) {
     if (typeof +event.currentTarget.value !== 'number') {
         event.currentTarget.style.borderColor = 'red'
+        totalArray[0] = 0
     } else if (event.currentTarget === inputs[0] && event.currentTarget.value !== '') {
         event.currentTarget.style.borderColor = '#08a6e4'
         listItems[0].style.display = 'block'
@@ -54,6 +55,7 @@ function handleChange(event) {
 
     if (typeof +event.currentTarget.value !== 'number') {
         event.currentTarget.style.borderColor = 'red'
+        totalArray[1] = 0
     } else if (event.currentTarget === inputs[1] && event.currentTarget.value !== '') {
         event.currentTarget.style.borderColor = '#08a6e4'
         listItems[1].style.display = 'block'
