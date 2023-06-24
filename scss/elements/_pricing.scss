@@ -2,12 +2,15 @@
 @import "base";
 
 #prices {
-  margin: 3.3125em auto;
-
+  margin: 3em auto 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @include tablet{
+    margin: 7em auto 5em;
+  }
 
   .pricing__boxes {
     width: 100%;
@@ -91,7 +94,7 @@
     }
 
     .pricing__box--basic {
-      border: 2px solid $color-redish;
+      border: 1px solid $color-redish;
 
       .pricing__price {
         color: $color-redish;
@@ -102,7 +105,7 @@
       width: 80%;
       min-width: 339px;
       height: 277px;
-      border: 2px solid $color-primary;
+      border: 1px solid $color-primary;
       box-shadow: 5px 10px 27px #07ACE629;
 
       .pricing__price {
@@ -120,7 +123,7 @@
       }
     }
     .pricing__box--premium {
-      border: 2px solid $color-green;
+      border: 1px solid $color-green;
 
       .pricing__price {
         color: $color-green;

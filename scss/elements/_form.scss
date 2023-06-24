@@ -1,0 +1,86 @@
+@import "../settings/all";
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  @include tablet{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+    &__column{
+      width: 100%;
+      margin: 5em 0;
+      &:first-of-type{
+        margin-bottom: 0;
+      }
+      @include tablet{
+        width: 45%;
+      }
+      @include desktop{
+        width: 33%;
+      }
+    }
+    &__title{
+      text-align: left;
+      font-size: 3em;
+      font-family: $font-raleway;
+    }
+    &__instruction{
+      margin: 1.5em 0;
+      @include tablet{
+        margin: 2em 0;
+      }
+    }
+    &__details{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      @include tablet{
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .details__item{
+        color: $color-grey;
+        font-family: $font-open-sans;
+        font-size: 1em;
+        img{
+          margin-right: 0.5em;
+        }
+      }
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    &__checkbox{
+      display: flex;
+      flex-direction: row;
+    }
+    &__field{
+      display: flex;
+      flex-direction: column;
+    }
+    &__label {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $color-primary;
+      line-height: 0.9rem;
+      letter-spacing: 3px;
+      font-size: 0.6875rem;
+      margin-bottom: 0.5em;
+    }
+    &__input{
+      border: transparent;
+      border-bottom: 1px solid $color-grey;
+      padding-bottom: 2px;
+    }
+    .btn{
+      position: static;
+      transform: translate(0, 50%);
+      align-self: flex-end;
+      font-size: 0.8125rem;
+      padding: 20px 97px;
+      background-color: $color-primary;
+    }
+  }
+}
